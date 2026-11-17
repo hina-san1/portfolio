@@ -1,1 +1,55 @@
 @import 'tailwindcss';
+@source not '../docs';
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Design tokens — source of truth: docs/design-spec.md */
+@theme {
+  /* Only the design's four blues exist; Tailwind's default blue scale is removed */
+  --color-blue-*: initial;
+
+  --font-sans: 'Poppins', system-ui, sans-serif;
+
+  --color-bg: #ffffff;
+  --color-bg-alt: #f0f3fa;
+  --color-surface: #ffffff;
+  --color-surface-2: #f0f3fa;
+  --color-blue-100: #d5deef;
+  --color-blue-200: #b1c9ef;
+  --color-blue-300: #8aaee0;
+  --color-blue-400: #638ecb;
+  --color-blob-back: #d5deef;
+  --color-blob-front: #b1c9ef;
+  --color-primary: #395886;
+  --color-accent: #395886;
+  --color-ink: #1e2d45;
+  --color-ink-muted: #55627a;
+  --color-footer: #1e2d45;
+}
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --color-bg: #0e1626;
+  --color-bg-alt: #121c2e;
+  --color-surface: #1a2539;
+  --color-surface-2: #24314a;
+  --color-blue-100: #24314a;
+  --color-blue-200: #2c3d5a;
+  --color-blob-back: #1c2a44;
+  --color-blob-front: #2c4370;
+  --color-primary: #4a6fa5;
+  --color-accent: #8aaee0;
+  --color-ink: #f0f3fa;
+  --color-ink-muted: #a9b6cc;
+  --color-footer: #0a111e;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink antialiased;
+  }
+}
