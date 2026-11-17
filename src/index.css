@@ -24,6 +24,8 @@
   --color-ink: #1e2d45;
   --color-ink-muted: #55627a;
   --color-footer: #1e2d45;
+
+  --shadow-knob: 0 4px 10px -2px rgb(30 45 69 / 0.25);
 }
 
 :root {

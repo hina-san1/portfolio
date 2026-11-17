@@ -3,9 +3,20 @@ import { Menu } from 'lucide-react'
 import { navLinks } from '../../data/navLinks.ts'
 import { useState } from 'react'
 import MobileMenu from './MobileMenu.tsx'
+import ThemeToggle from '../ui/ThemeToggle.tsx'
+import { applyTheme, getInitialTheme } from '../../lib/theme.ts'
+import type { Theme } from '../../lib/theme.ts'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+
+  const [theme, setTheme] = useState<Theme>(getInitialTheme)
+
+  function toggleTheme() {
+    const next: Theme = theme === 'dark' ? 'light' : 'dark'
+    setTheme(next)
+    applyTheme(next)
+  }
 
   return (
     <>
@@ -25,6 +36,7 @@ function Navbar() {
             </ul>
           </nav>
           <div className="flex items-center gap-3">
+            <ThemeToggle theme={theme} onToggle={toggleTheme} />
             <a
               href="#contact"
               className="hidden items-center rounded-full bg-primary px-5.5 py-3 text-sm font-medium text-white xl:inline-flex"
