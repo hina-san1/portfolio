@@ -47,7 +47,7 @@ function Navbar() {
             <ThemeToggle theme={theme} onToggle={toggleTheme} />
             <a
               href="#contact"
-              className="hidden items-center rounded-full bg-primary px-5.5 py-3 text-sm font-medium text-white transition hover:brightness-110 active:brightness-95 xl:inline-flex"
+              className="hidden items-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-white transition hover:brightness-110 active:brightness-95 xl:inline-flex"
             >
               Contact Me
             </a>
