@@ -26,6 +26,8 @@
   --color-footer: #1e2d45;
 
   --shadow-knob: 0 4px 10px -2px rgb(30 45 69 / 0.25);
+
+  --spacing-nav: 4rem;
 }
 
 :root {

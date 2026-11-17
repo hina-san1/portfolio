@@ -1,0 +1,57 @@
+import { ArrowRight, Download } from 'lucide-react'
+import ButtonLink from '../components/ui/ButtonLink.tsx'
+
+function Hero() {
+  return (
+    <section
+      id="home"
+      className="flex min-h-[calc(100svh-var(--spacing-nav))] items-center px-4 py-8 md:px-8 lg:py-12"
+    >
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+        {/*Text Content*/}
+        <div className="mx-auto flex max-w-150 flex-col items-center gap-8 text-center lg:mx-0 lg:max-w-none lg:shrink-0 lg:items-start lg:text-left">
+          <div className="flex flex-col gap-3">
+            <p className="flex items-center justify-center gap-3 text-sm font-semibold tracking-widest text-accent uppercase lg:justify-start">
+              <span aria-hidden="true" className="h-0.5 w-6 bg-accent lg:w-8" />
+              Hello, I'm
+              <span
+                aria-hidden="true"
+                className="h-0.5 w-6 bg-accent lg:hidden"
+              />
+            </p>
+            <h1 className="text-3xl leading-tight font-bold tracking-tight md:text-4xl lg:whitespace-nowrap xl:text-5xl">
+              Raymond Charles <span className="text-blue-400">Jimenez</span>
+            </h1>
+            <p className="text-lg leading-relaxed md:text-2xl">
+              Aspiring{' '}
+              <span className="font-semibold text-accent">Full-Stack</span> Web
+              Developer
+            </p>
+          </div>
+          <p className="max-w-lg text-base leading-relaxed text-ink-muted">
+            I build modern, responsive, and user-friendly web applications,
+            combining thoughtful interface design with functional and reliable
+            solutions.
+          </p>
+          <div className="flex w-full flex-col gap-3 md:w-auto md:flex-row md:gap-4">
+            <ButtonLink href="#projects" size="lg">
+              View Projects
+              <ArrowRight size={20} />
+            </ButtonLink>
+            <ButtonLink href="/cv.pdf" download variant="outline" size="lg">
+              Download CV
+              <Download size={20} />
+            </ButtonLink>
+          </div>
+        </div>
+
+        {/*Image Content*/}
+        <div className="mx-auto w-full max-w-120 bg-blue-200 lg:mx-0 lg:max-w-170">
+          Visual
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Hero
