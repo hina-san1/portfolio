@@ -14,7 +14,7 @@ function ThemeToggle({ theme, onToggle }: ThemeToggleProps) {
       aria-checked={theme === 'dark'}
       aria-label="Dark mode"
       onClick={onToggle}
-      className="relative flex h-11 w-20 items-center justify-between rounded-full bg-surface-2 px-3"
+      className="relative flex h-11 w-20 items-center justify-between rounded-full bg-surface-2 px-3 transition hover:bg-blue-100 active:scale-95 dark:hover:bg-blue-200"
     >
       <span
         aria-hidden="true"
