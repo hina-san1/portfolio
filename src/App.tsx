@@ -1,10 +1,11 @@
-import Logo from './components/ui/Logo'
+import Navbar from './components/layout/Navbar.tsx'
 
 function App() {
   return (
-    <main className="flex min-h-svh items-center justify-center">
-      <Logo />
-    </main>
+    <>
+      <Navbar />
+      <main className="min-h-[200vh]" />
+    </>
   )
 }
 
