@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { X } from 'lucide-react'
+import { Mail, X } from 'lucide-react'
 import Logo from '../ui/Logo.tsx'
 import { navLinks } from '../../data/navLinks.ts'
 
@@ -60,8 +60,9 @@ function MobileMenu({ onClose }: MobileMenuProps) {
       <a
         href="#contact"
         onClick={onClose}
-        className="flex min-h-13 items-center justify-center rounded-full bg-primary px-7 py-3.5 text-base font-medium text-white transition hover:brightness-110 active:brightness-95"
+        className="flex min-h-13 items-center justify-center gap-2.5 rounded-full bg-primary px-7 py-3.5 text-base font-medium text-white transition hover:brightness-110 active:brightness-95"
       >
+        <Mail size={20} />
         Contact Me
       </a>
     </div>

@@ -1,5 +1,5 @@
 import Logo from '../ui/Logo.tsx'
-import { Menu } from 'lucide-react'
+import { Mail, Menu } from 'lucide-react'
 import { navLinks } from '../../data/navLinks.ts'
 import { useState } from 'react'
 import MobileMenu from './MobileMenu.tsx'
@@ -47,8 +47,9 @@ function Navbar() {
             <ThemeToggle theme={theme} onToggle={toggleTheme} />
             <a
               href="#contact"
-              className="hidden items-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-white transition hover:brightness-110 active:brightness-95 xl:inline-flex"
+              className="hidden items-center gap-2.5 rounded-full bg-primary px-5 py-3 text-sm font-medium text-white transition hover:brightness-110 active:brightness-95 xl:inline-flex"
             >
+              <Mail size={18} />
               Contact Me
             </a>
             <button
