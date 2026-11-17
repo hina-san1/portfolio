@@ -49,8 +49,8 @@ function Navbar() {
               href="#contact"
               className="hidden items-center gap-2.5 rounded-full bg-primary px-5 py-3 text-sm font-medium text-white transition hover:brightness-110 active:brightness-95 xl:inline-flex"
             >
-              <Mail size={18} />
               Contact Me
+              <Mail size={18} />
             </a>
             <button
               type="button"
