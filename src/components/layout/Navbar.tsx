@@ -1,7 +1,8 @@
 import Logo from '../ui/Logo.tsx'
 import { Mail, Menu } from 'lucide-react'
 import { navLinks } from '../../data/navLinks.ts'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { cn } from '../../lib/cn.ts'
 import MobileMenu from './MobileMenu.tsx'
 import ThemeToggle from '../ui/ThemeToggle.tsx'
 import ButtonLink from '../ui/ButtonLink.tsx'
@@ -13,6 +14,15 @@ function Navbar() {
 
   const [theme, setTheme] = useState<Theme>(getInitialTheme)
 
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 0)
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   function toggleTheme() {
     const next: Theme = theme === 'dark' ? 'light' : 'dark'
     setTheme(next)
@@ -21,7 +31,12 @@ function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 h-nav px-4 py-3 md:px-8">
+      <header
+        className={cn(
+          'sticky top-0 z-50 h-nav border-b border-transparent bg-bg/80 px-4 py-3 backdrop-blur-md transition-colors md:px-8',
+          isScrolled && 'border-line',
+        )}
+      >
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <a
             href="#home"

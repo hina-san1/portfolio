@@ -71,6 +71,16 @@
 }
 
 @layer base {
+  html {
+    scroll-padding-top: var(--spacing-nav);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
   body {
     @apply bg-bg text-ink antialiased;
   }
