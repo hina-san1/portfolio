@@ -14,11 +14,11 @@ function ThemeToggle({ theme, onToggle }: ThemeToggleProps) {
       aria-checked={theme === 'dark'}
       aria-label="Dark mode"
       onClick={onToggle}
-      className="relative flex h-10 w-18 items-center justify-between rounded-full bg-surface-2 px-3 transition hover:bg-blue-100 active:scale-95 dark:hover:bg-blue-200"
+      className="relative flex h-10 w-18 items-center justify-between rounded-full bg-line px-3 text-label transition hover:bg-line-strong active:scale-95"
     >
       <span
         aria-hidden="true"
-        className="absolute top-1 left-1 size-8 rounded-full bg-white shadow-knob transition-transform motion-reduce:transition-none dark:translate-x-8 dark:bg-primary"
+        className="absolute top-1 left-1 size-8 rounded-full bg-surface shadow-knob transition-transform motion-reduce:transition-none dark:translate-x-8 dark:bg-primary"
       />
       <Sun size={18} className="relative" />
       <Moon size={18} className="relative" />

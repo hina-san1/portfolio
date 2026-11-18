@@ -48,7 +48,7 @@ function MobileMenu({ onClose }: MobileMenuProps) {
           type="button"
           aria-label="Close menu"
           onClick={onClose}
-          className="grid size-10 place-items-center rounded-xl bg-bg-alt text-ink transition hover:bg-blue-100 active:scale-95 dark:hover:bg-blue-200"
+          className="grid size-10 place-items-center rounded-xl bg-line text-ink transition hover:bg-line-strong active:scale-95"
         >
           <X size={20} />
         </button>
@@ -60,7 +60,7 @@ function MobileMenu({ onClose }: MobileMenuProps) {
               <a
                 href={link.href}
                 onClick={onClose}
-                className="flex min-h-14 items-center rounded-xl px-4 text-lg font-medium transition-colors hover:bg-bg-alt active:bg-blue-100 dark:active:bg-blue-200"
+                className="flex min-h-14 items-center rounded-xl px-4 text-lg font-medium transition-colors hover:bg-surface-2 active:bg-line"
               >
                 {link.label}
               </a>

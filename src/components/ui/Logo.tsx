@@ -4,8 +4,11 @@ type LogoProps = {
 }
 
 const colors = {
-  default: { ring: 'stroke-blue-400', letter: 'fill-primary' },
-  inverse: { ring: 'stroke-blue-300', letter: 'fill-white' },
+  default: {
+    ring: 'stroke-graphite-300 dark:stroke-graphite-500',
+    letter: 'fill-ink',
+  },
+  inverse: { ring: 'stroke-graphite-500', letter: 'fill-graphite-50' },
 }
 
 function Logo({ variant = 'default', className }: LogoProps) {

@@ -36,7 +36,7 @@ function Navbar() {
                 <li key={link.href} className="text-sm">
                   <a
                     href={link.href}
-                    className="underline decoration-transparent decoration-2 underline-offset-4 hover:decoration-accent"
+                    className="underline decoration-transparent decoration-2 underline-offset-4 hover:decoration-ink"
                   >
                     {link.label}
                   </a>
@@ -55,7 +55,7 @@ function Navbar() {
             <button
               type="button"
               aria-label="Open menu"
-              className="grid size-10 place-items-center rounded-xl bg-surface-2 text-ink transition hover:bg-blue-100 active:scale-95 lg:hidden dark:hover:bg-blue-200"
+              className="grid size-10 place-items-center rounded-xl bg-line text-ink transition hover:bg-line-strong active:scale-95 lg:hidden"
               onClick={() => setIsOpen(true)}
               aria-expanded={isOpen}
             >

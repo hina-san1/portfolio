@@ -10,9 +10,9 @@ const base =
 
 const variants = {
   primary:
-    'border-transparent bg-primary text-white hover:brightness-110 active:brightness-95',
+    'border-transparent bg-primary text-on-primary hover:opacity-90 active:opacity-80',
   outline:
-    'border-accent bg-surface text-accent hover:bg-bg-alt active:bg-blue-100 dark:active:bg-blue-200',
+    'border-charcoal bg-transparent text-charcoal hover:bg-surface-2 active:bg-line',
 }
 
 // py is 2px less than usual because border-2 adds height

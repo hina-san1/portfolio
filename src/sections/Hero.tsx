@@ -11,20 +11,23 @@ function Hero() {
         {/*Text Content*/}
         <div className="mx-auto flex max-w-150 flex-col items-center gap-8 text-center lg:mx-0 lg:max-w-none lg:shrink-0 lg:items-start lg:text-left">
           <div className="flex flex-col gap-3">
-            <p className="flex items-center justify-center gap-3 text-sm font-semibold tracking-widest text-accent uppercase lg:justify-start">
-              <span aria-hidden="true" className="h-0.5 w-6 bg-accent lg:w-8" />
+            <p className="flex items-center justify-center gap-3 text-sm font-semibold tracking-widest text-label uppercase lg:justify-start">
+              <span
+                aria-hidden="true"
+                className="h-0.5 w-6 bg-charcoal lg:w-8"
+              />
               Hello, I'm
               <span
                 aria-hidden="true"
-                className="h-0.5 w-6 bg-accent lg:hidden"
+                className="h-0.5 w-6 bg-charcoal lg:hidden"
               />
             </p>
             <h1 className="text-3xl leading-tight font-bold tracking-tight md:text-4xl lg:whitespace-nowrap xl:text-5xl">
-              Raymond Charles <span className="text-blue-400">Jimenez</span>
+              Raymond Charles <span className="text-name">Jimenez</span>
             </h1>
             <p className="text-lg leading-relaxed md:text-2xl">
               Aspiring{' '}
-              <span className="font-semibold text-accent">Full-Stack</span> Web
+              <span className="font-semibold text-label">Full-Stack</span> Web
               Developer
             </p>
           </div>
@@ -46,7 +49,7 @@ function Hero() {
         </div>
 
         {/*Image Content*/}
-        <div className="mx-auto w-full max-w-120 bg-blue-200 lg:mx-0 lg:max-w-170">
+        <div className="mx-auto w-full max-w-120 bg-blob-front lg:mx-0 lg:max-w-170">
           Visual
         </div>
       </div>

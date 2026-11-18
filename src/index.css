@@ -2,30 +2,45 @@
 @source not '../docs';
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Design tokens — source of truth: docs/design-spec.md */
+/* Color tokens — source of truth: docs/Graphite color guide.md */
 @theme {
-  /* Only the design's four blues exist; Tailwind's default blue scale is removed */
-  --color-blue-*: initial;
+  /* Only the 13 Graphite grays exist; Tailwind's default palette is removed */
+  --color-*: initial;
 
   --font-sans: 'Poppins', system-ui, sans-serif;
 
-  --color-bg: #ffffff;
-  --color-bg-alt: #f0f3fa;
-  --color-surface: #ffffff;
-  --color-surface-2: #f0f3fa;
-  --color-blue-100: #d5deef;
-  --color-blue-200: #b1c9ef;
-  --color-blue-300: #8aaee0;
-  --color-blue-400: #638ecb;
-  --color-blob-back: #d5deef;
-  --color-blob-front: #b1c9ef;
-  --color-primary: #395886;
-  --color-accent: #395886;
-  --color-ink: #1e2d45;
-  --color-ink-muted: #55627a;
-  --color-footer: #1e2d45;
+  --color-graphite-0: #ffffff;
+  --color-graphite-50: #f5f5f5;
+  --color-graphite-100: #dcdce3;
+  --color-graphite-200: #c9c9d2;
+  --color-graphite-300: #9a9aa6;
+  --color-graphite-400: #86868f;
+  --color-graphite-500: #63636e;
+  --color-graphite-600: #4a4a52;
+  --color-graphite-700: #3e3e45;
+  --color-graphite-800: #2a2a30;
+  --color-graphite-850: #232327;
+  --color-graphite-900: #1c1c21;
+  --color-graphite-950: #0c0c0e;
 
-  --shadow-knob: 0 4px 10px -2px rgb(30 45 69 / 0.25);
+  --color-bg: var(--color-graphite-0);
+  --color-surface: var(--color-graphite-0);
+  --color-surface-2: var(--color-graphite-50);
+  --color-line: var(--color-graphite-100);
+  --color-line-strong: var(--color-graphite-200);
+  --color-blob-back: var(--color-graphite-100);
+  --color-blob-front: var(--color-graphite-200);
+  --color-tile: var(--color-graphite-700);
+  --color-charcoal: var(--color-graphite-700);
+  --color-name: var(--color-graphite-400);
+  --color-label: var(--color-graphite-500);
+  --color-ink-muted: var(--color-graphite-500);
+  --color-ink: var(--color-graphite-850);
+  --color-primary: var(--color-graphite-950);
+  --color-on-primary: var(--color-graphite-0);
+  --color-footer: var(--color-graphite-850);
+
+  --shadow-knob: 0 4px 10px -2px rgb(35 35 39 / 0.25);
 
   --spacing-nav: 4rem;
 }
@@ -37,19 +52,22 @@
 .dark {
   color-scheme: dark;
 
-  --color-bg: #0e1626;
-  --color-bg-alt: #121c2e;
-  --color-surface: #1a2539;
-  --color-surface-2: #24314a;
-  --color-blue-100: #24314a;
-  --color-blue-200: #2c3d5a;
-  --color-blob-back: #1c2a44;
-  --color-blob-front: #2c4370;
-  --color-primary: #4a6fa5;
-  --color-accent: #8aaee0;
-  --color-ink: #f0f3fa;
-  --color-ink-muted: #a9b6cc;
-  --color-footer: #0a111e;
+  --color-bg: var(--color-graphite-950);
+  --color-surface: var(--color-graphite-900);
+  --color-surface-2: var(--color-graphite-800);
+  --color-line: var(--color-graphite-700);
+  --color-line-strong: var(--color-graphite-600);
+  --color-blob-back: var(--color-graphite-850);
+  --color-blob-front: var(--color-graphite-700);
+  --color-tile: var(--color-graphite-600);
+  --color-charcoal: var(--color-graphite-50);
+  --color-name: var(--color-graphite-500);
+  --color-label: var(--color-graphite-200);
+  --color-ink-muted: var(--color-graphite-300);
+  --color-ink: var(--color-graphite-50);
+  --color-primary: var(--color-graphite-50);
+  --color-on-primary: var(--color-graphite-850);
+  --color-footer: var(--color-graphite-900);
 }
 
 @layer base {
@@ -62,7 +80,7 @@
   }
 
   :where(a, button):focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-ink);
     outline-offset: 2px;
   }
 }
