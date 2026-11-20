@@ -1,5 +1,6 @@
 import { ArrowRight, Download } from 'lucide-react'
 import ButtonLink from '../components/ui/ButtonLink.tsx'
+import heroImage from '../assets/hero.webp'
 
 function Hero() {
   return (
@@ -7,9 +8,9 @@ function Hero() {
       id="home"
       className="flex min-h-[calc(100svh-var(--spacing-nav))] items-center px-4 py-8 md:px-8 lg:py-12"
     >
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 lg:flex-row lg:items-center lg:justify-between lg:gap-20">
         {/*Text Content*/}
-        <div className="mx-auto flex max-w-150 flex-col items-center gap-8 text-center lg:mx-0 lg:max-w-none lg:shrink-0 lg:items-start lg:text-left">
+        <div className="mx-auto flex max-w-150 flex-col items-center gap-8 text-center lg:mx-0 lg:max-w-none lg:items-start lg:text-left">
           <div className="flex flex-col gap-3">
             <p className="flex items-center justify-center gap-3 text-sm font-semibold tracking-widest text-label uppercase lg:justify-start">
               <span aria-hidden="true" className="h-0.5 w-6 bg-charcoal" />
@@ -46,8 +47,25 @@ function Hero() {
         </div>
 
         {/*Image Content*/}
-        <div className="mx-auto w-full max-w-120 bg-blob-front lg:mx-0 lg:max-w-170">
-          Visual
+        <div className="relative mx-auto w-fit shrink-0 lg:mx-0">
+          <div
+            aria-hidden="true"
+            className="absolute bottom-0 aspect-square w-full -translate-x-1/10 -translate-y-1/10 rounded-full bg-blob-back"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute bottom-0 aspect-square w-full rounded-full bg-blob-front"
+          />
+          <div className="relative overflow-hidden rounded-b-full px-6">
+            <img
+              src={heroImage}
+              alt="Photo of Raymond Charles Jimenez"
+              width={860}
+              height={1279}
+              fetchPriority="high"
+              className="block h-80 w-auto md:h-96 lg:h-120"
+            />
+          </div>
         </div>
       </div>
     </section>
