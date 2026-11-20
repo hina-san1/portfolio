@@ -46,7 +46,7 @@ function Navbar() {
             <span className="text-lg font-semibold">RC Jimenez</span>
           </a>
           <nav aria-label="Primary" className="hidden lg:block">
-            <ul className="flex gap-6 xl:gap-8 2xl:gap-12">
+            <ul className="flex gap-8">
               {navLinks.map((link) => (
                 <li key={link.href} className="text-sm">
                   <a
