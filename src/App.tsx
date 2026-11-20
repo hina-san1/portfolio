@@ -1,12 +1,14 @@
 ﻿import Navbar from './components/layout/Navbar.tsx'
 import Hero from './sections/Hero.tsx'
+import About from './sections/About.tsx'
 
 function App() {
   return (
     <>
       <Navbar />
-      <main className="min-h-[200vh]">
+      <main>
         <Hero />
+        <About />
       </main>
     </>
   )
