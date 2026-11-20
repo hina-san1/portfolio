@@ -1,4 +1,4 @@
-import { ArrowRight, Download } from 'lucide-react'
+import { ArrowRight, Code, Download } from 'lucide-react'
 import ButtonLink from '../components/ui/ButtonLink.tsx'
 import heroImage from '../assets/hero.webp'
 
@@ -65,6 +65,12 @@ function Hero() {
               fetchPriority="high"
               className="block h-80 w-auto md:h-96 lg:h-120"
             />
+          </div>
+          <div
+            aria-hidden="true"
+            className="absolute top-2/3 right-0 flex size-11 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-tile text-graphite-0 shadow-lg"
+          >
+            <Code size={16} />
           </div>
         </div>
       </div>
